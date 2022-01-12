@@ -1,12 +1,12 @@
 public class Nombre {
     
-    private int value = 0;
+    private float value = 0;
 
     /**
      * Constructeur
      * @param v : Valeur que l'on donne au nombre
      */
-    public Nombre(int v) {
+    public Nombre(float v) {
         this.value = v;
     }
 
@@ -22,7 +22,7 @@ public class Nombre {
      * Getter de la valeur
      * @return La valeur
      */
-    public int getValue() {
+    public float getValue() {
         return this.value;
     }
 
@@ -30,7 +30,38 @@ public class Nombre {
      * Setter de la valeur
      * @param v : La valeur
      */
-    public void setValue(int v) {
+    public void setValue(float v) {
         this.value = v;
     }
+    /**
+     * Additionne deux nombres entre eux
+     * @param other : le nombre a additionné
+     * @return le résultat
+     */
+    public Nombre addition(Nombre other) {
+         return new Nombre(this.value + other.value);
+    }
+    
+    public Nombre division(Nombre other) {
+        if(other.value != 0)
+        {
+
+            return new Nombre(this.value / other.value);
+        }
+    return new Nombre(0);
+    }
+
+    public Nombre soustraction(Nombre other) {
+        return new Nombre(this.value - other.value);
+    }
+
+    public Nombre multiplication(Nombre other) {
+        return new Nombre(this.value * other.value);
+    }
+
+    public Nombre pourcentage(Nombre other) {
+        return new Nombre(this.division(other).getValue() * 100);
+    }
+
 }
+
