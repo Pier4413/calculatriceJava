@@ -15,7 +15,7 @@ public class Nombre {
      */
     @Override
     public String toString() {
-        return "Valeur : "+this.value;
+        return String.format("%f", this.value);
     }
 
     /**
@@ -45,7 +45,6 @@ public class Nombre {
     public Nombre division(Nombre other) {
         if(other.value != 0)
         {
-
             return new Nombre(this.value / other.value);
         }
     return new Nombre(0);
@@ -61,6 +60,11 @@ public class Nombre {
 
     public Nombre pourcentage(Nombre other) {
         return new Nombre(this.division(other).getValue() * 100);
+    }
+
+    public void addToEnd(int v) {
+        this.value *= 10;
+        this.value += v;
     }
 
 }
