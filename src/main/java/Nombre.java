@@ -47,7 +47,7 @@ public class Nombre {
         {
             return new Nombre(this.value / other.value);
         }
-    return new Nombre(0);
+        return new Nombre(0);
     }
 
     public Nombre soustraction(Nombre other) {
@@ -63,8 +63,7 @@ public class Nombre {
     }
 
     public void addToEnd(int v) {
-        this.value *= 10;
-        this.value += v;
+        
     }
 
 }
