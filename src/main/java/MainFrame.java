@@ -106,8 +106,7 @@ public class MainFrame extends JFrame {
         buttons.add(new Button(left, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "1", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                number1.addToEnd(1);
-                screen.setText(number1.toString());
+                // TODO Faire la logique
             }
         }));
 
