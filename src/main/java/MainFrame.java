@@ -107,6 +107,109 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 // TODO Faire la logique
+
+                screen.setText("1");
+
+            }
+        }));
+
+        // Bouton 2
+        buttons.add(new Button(center, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "2", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("2");
+
+            }
+        }));
+
+        // Bouton 3
+        buttons.add(new Button(right, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "3", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("3");
+
+            }
+        }));
+
+        // Bouton 4
+        buttons.add(new Button(left, secondRow, BUTTON_WIDTH, BUTTON_HEIGHT, "4", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("4");
+
+            }
+        }));
+
+        // Bouton CE
+        buttons.add(new Button(left, fourthRow, BUTTON_WIDTH, BUTTON_HEIGHT, "CE", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Bouh");
+
+            }
+        }));
+
+        // Bouton 0
+        buttons.add(new Button(center, fourthRow, BUTTON_WIDTH, BUTTON_HEIGHT, "0", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("0");
+
+            }
+        }));
+
+        // Bouton =
+        buttons.add(new Button(right, fourthRow, BUTTON_WIDTH, BUTTON_HEIGHT, "=", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Boo2");
+
+            }
+        }));
+
+        // Bouton +
+        buttons.add(new Button(rightConsole, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "+", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Pour tester");
+
+            }
+        }));
+
+        // Bouton -
+        buttons.add(new Button(rightConsole, secondRow, BUTTON_WIDTH, BUTTON_HEIGHT, "-", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Pour tester2");
+
+            }
+        }));
+
+        // Bouton /
+        buttons.add(new Button(rightConsole, thirdRow, BUTTON_WIDTH, BUTTON_HEIGHT, "/", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Pour tester3");
+
+            }
+        }));
+
+        // Bouton *
+        buttons.add(new Button(rightConsole, fourthRow, BUTTON_WIDTH, BUTTON_HEIGHT, "*", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out .println("Pour tester4");
+
             }
         }));
 
@@ -114,6 +217,8 @@ public class MainFrame extends JFrame {
             this.add(buttons.get(i));
         }
     }
+
+    
 
     /**
      * Renvoi les boutons
