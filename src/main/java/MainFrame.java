@@ -106,10 +106,8 @@ public class MainFrame extends JFrame {
         buttons.add(new Button(left, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "1", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                // TODO Faire la logique
-
-                screen.setText("1");
-
+                number1.addToEnd(1);
+                screen.setText(number1.toString());
             }
         }));
 
@@ -117,9 +115,8 @@ public class MainFrame extends JFrame {
         buttons.add(new Button(center, topRow, BUTTON_WIDTH, BUTTON_HEIGHT, "2", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-
-                System.out .println("2");
-
+                number1.addToEnd(2);
+                screen.setText(number1.toString());
             }
         }));
 

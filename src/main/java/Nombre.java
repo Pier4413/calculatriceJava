@@ -15,7 +15,7 @@ public class Nombre {
      */
     @Override
     public String toString() {
-        return String.format("%f", this.value);
+        return String.format("%.06f", this.value);
     }
 
     /**
@@ -87,8 +87,18 @@ public class Nombre {
      * Ajoute un nombre a la fin du nombre actuel
      * @param v : Le nombre a ajouter
      */
-    public void addToEnd(int v) {
+    public void addToEnd(float v) {
         // TODO Faire le calcul tel que si la valeur courant est 4 et que la valeur a ajouter est 3 alors la nouvelle valeur dans l'objet courant est 43
+        /*Nombre multiplicateurPar10 = new Nombre(10);
+        Nombre resultat = this.multiplication(multiplicateurPar10);
+        this.value = resultat.getValue();*/
+
+        // Exemple : Départ Valeur courante = 4
+        this.value = multiplication(new Nombre(10)).getValue();
+        // Exemple : Ici Valeur courante = 40
+        this.value = addition(new Nombre(v)).getValue();
+        // Exemple : Ici Valeur courante = 43
+        //this.value = this.value * 10 + v;
     }
 
 }
