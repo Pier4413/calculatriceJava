@@ -125,7 +125,8 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("3");
+                number1.addToEnd(3);
+                screen.setText(number1.toString());
 
             }
         }));
@@ -135,7 +136,8 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("4");
+                number1.addToEnd(4);
+                screen.setText(number1.toString());
 
             }
         }));
@@ -145,7 +147,9 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("Bouh");
+                number1.setValue(0);
+                number2.setValue(0);
+                screen.setText(number1.toString());
 
             }
         }));
@@ -155,7 +159,8 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("0");
+                number1.addToEnd(0);
+                screen.setText(number1.toString());
 
             }
         }));
@@ -175,7 +180,9 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("Pour tester");
+                number2 = number1.addition(number2);
+                number1.setValue(0);
+                screen.setText(number2.toString());
 
             }
         }));
@@ -185,7 +192,9 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("Pour tester2");
+                number2 = number1.soustraction(number2);
+                number1.setValue(0);
+                screen.setText(number2.toString());
 
             }
         }));
@@ -195,7 +204,17 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
-                System.out .println("Pour tester3");
+                number2 = number1.division(number2);
+                if(number2.getValue() == 0)
+                {
+                    screen.setText("ERR");
+                    number1.setValue(0);
+                    number2.setValue(0);
+
+
+                } 
+                number1.setValue(0);
+                screen.setText(number2.toString());
 
             }
         }));
